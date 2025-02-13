@@ -8,6 +8,22 @@
     <title>EncontraAQ | Ofertas</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
+
+        .underline-custom {
+            position:relative;
+            display:inline block;
+        }
+
+        .underline-custom::after {
+            content: '';
+            position:absolute;
+            left:50%;
+            width: 55%;
+            bottom:-18px;
+            height: 3px; 
+            background-color: rgb(1, 179, 102,1); 
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 
@@ -28,15 +44,28 @@
         </div>
     </header>
     
-    <div class="relative">
+    <div class="relative top-10 h-[572px] w-[1372px] banner">
 
-        <img src="../assets/img/Rectangle17@2x.png" alt="">
+        <img src="../assets/img/Rectangle17@2x.png" alt="" class="w-full h-full object-cover">
 
-        <div class="absolute left-0 top-1/2 transform translate-y-1/2 font-medium text-white text-4xl texto">
+
+        <div class="absolute inset-0 h-[572px] w-[1372px] bg-gradient-to-r from-black to-transparent opacity-90"></div>
+        <div class="absolute left-10 top-30 transform translate-y-1/2 font-medium text-white text-6xl texto">
             <p>Escolha aquele que</p>
-            <p class="text-green-500">que você merece</p>
+            <p class="text-green-400">você merece<span class="text-white">.</span></p>
         </div>
 
+        <div class="absolute font-medium text-3xl left-10 top-80 text-white box-border border-1 p-2 rounded-lg">
+            <p>Ir para o catálogo ➔</p>
+        </div>
+
+        <div class="relative top-20 destaques">
+            <div class="flex justify-center titulo">
+                <div class="underline-custom font-medium text-5xl text-gray-950">
+                    <p>Destaques</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
