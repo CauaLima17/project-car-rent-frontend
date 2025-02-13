@@ -251,6 +251,9 @@
     --color-stone-950: oklch(0.147 0.004 49.25);
     --color-black: #000;
     --color-white: #fff;
+
+    --background-image-teste: url("./assets/img/Rectangle17@2x.png")
+
     --spacing: 0.25rem;
     --breakpoint-sm: 40rem;
     --breakpoint-md: 48rem;
