@@ -49,7 +49,7 @@
         </div>
     </article>
     
-    <article class="justify-center mx-auto max-w-[1400px] destaques mb-[98px]">
+    <article class="relative justify-center mx-auto max-w-[1400px] destaques mb-[98px]">
         <h1 class="relative flex justify-center underline-custom font-medium text-[48px] text-gray-950 mb-15">Destaques</h1>
         <div class="imagens flex px-15 gap-15">
             <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
@@ -58,12 +58,23 @@
         </div>
     </article>
 
-    <article class="relative justify-center categorias max-w-[1440px] mx-auto h-[560px]">
-        <div class="imagens flex px-10">
-            <div><img src="../assets/img/carroLuxo.png" alt=""></div>
-            <div><img src="../assets/img/carroEconomica.png" alt=""></div>
-            <div><img src="../assets/img/carroIntermediário.png" alt=""></div>
+    <article class="relative categorias w-full mx-auto h-[560px] overflow-hidden">
+        <div class="relative imagens flex px-10 w-full">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 z-10"></div>
+            <div class="relative">
+                <img src="../assets/img/carroLuxo.png" alt="" class="relative w-full h-full object-cover">
+                <h1 class="absolute left-[158px] top-[30px] font-medium text-white text-[32px] texto z-50">LUXUOSA</h1>
+            </div>
+            <div class="relative">
+                <img src="../assets/img/carroEconomica.png" alt="" class="relative w-full h-full object-cover">
+                <h1 class="absolute transform translate-x-1/2 top-[30px] font-medium text-white text-[32px] texto z-50">ECONÔMICA</h1>
+            </div>
+            <div class="relative">
+                <img src="../assets/img/carroIntermediário.png" alt="" class="relative w-full h-full object-cover">
+                <h1 class="absolute left-[116px] top-[30px] font-medium text-white text-[32px] texto z-50">INTERMEDIÁRIA</h1>
+            </div>
         </div>
+        
     </article>
 
 
