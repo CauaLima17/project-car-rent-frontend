@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/index.css"">
+    <link rel="icon" type="image/svg" href="../assets/icons/AQ.svg">
+    <link rel="stylesheet" href="../css/output.css">
     <title>EncontraAQ | Ofertas</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         .underline-custom::after {
             content: '';
@@ -22,113 +22,109 @@
 </head>
 <body>
     <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl mb-16">
-        <div class="font-medium text-[32px]">Encontra<span class="text-verde-0">AQ</span></div>
-        <div class="flex gap-20 font-medium text-[20px]">
-            <nav class="flex gap-10">
-                <a href="#">Ofertas</a>
-                <a href="#">Locais</a>
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+        <a href="/" class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></a>
+        <div class="flex gap-20 items-center font-medium text-[20px] text-gray-600">
+            <nav class="flex gap-10 items-center">
+                <a href="./src/pages/ofertas.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Ofertas</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Locais</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Sobre</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
             </nav>
-            <div class="">
-                <a href="#" class="p-3">Login</a>
-                <a href="#" class="p-1.5 rounded-md bg-green-600 text-white font-medium cadastro text-[16px]">Cadastrar-se</a>
+            <div class="flex items-center gap-10">
+                <a href="#" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Login</a>
+                <a href="#" class="duration-200 p-2 hover:bg-green-800 rounded-md bg-green-600 text-white font-medium">Cadastrar-se</a>
             </div>
         </div>
     </header>
 
-    <article class="relative h-[572px] w-full banner mb-25">
-        <img src="../assets/img/Rectangle17@2x.png" alt="" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-90"></div>
-        <div class="absolute left-10 bottom-1/2 transform translate-y-1/2 font-medium text-white text-6xl texto">
-            <h1 class="mb-10">Escolha aquele que <br><span class="text-green-400">você merece</span>.</h1>
-            <button class="duration-200 flex gap-3 hover:bg-white hover:text-black cursor-pointer font-medium text-3xl text-white border-1 px-4 py-3 rounded-lg">
+    <article class="relative bg-ofertas-intro bg-center bg-cover h-[600px] w-full mb-25">
+        <div class="flex flex-col items-start justify-center p-16 h-full font-medium text-white">
+            <div class="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
+            <h1 class="mb-10 text-6xl/20 z-1">
+                Escolha aquele que 
+                <br>
+                <span class="text-green-400">você merece</span>.
+            </h1>
+            <button class="z-1 duration-200 flex gap-3 hover:bg-white hover:text-black cursor-pointer font-medium text-3xl border-1 border-white px-4 py-3 rounded-lg">
                 <p>Ir para o catálogo</p>
                 <span><img src="../assets/icons/arrow.svg" alt=""></span>
             </button>
         </div>
     </article>
     
-    <article class="relative justify-center mx-auto max-w-[1400px] destaques mb-[98px]">
-        <h1 class="relative flex justify-center underline-custom font-medium text-[48px] text-gray-950 mb-15">Destaques</h1>
-        <div class="imagens flex px-15 gap-15">
+    <article class="flex flex-col items-center mx-auto max-w-[1400px] mb-25">
+        <h1 class="font-medium text-[48px] text-gray-950 mb-15">Destaques</h1>
+        <div class="flex gap-15">
             <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
             <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
             <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
         </div>
     </article>
 
-    <article class="relative categorias w-full mx-auto h-[560px] mb-10">
-        <div class="relative imagens flex">
-            <div class="relative flex flex-col justify-center">
-                <h1 class="absolute right-1/2 translate-1/2 top-[20px] font-medium text-white text-[32px] texto z-50">LUXUOSA</h1>
-                <button class="absolute duration-200 right-1/2 translate-1/2 hover:bg-white hover:text-black cursor-pointer font-medium text-[24px] text-white border-1 px-4 py-2 rounded-lg z-50 bottom-[40px]"> 
-                    Mais Detalhes
-                </button>
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 z-10"></div>
-                <img src="../assets/img/carroLuxo.png" alt="" class="relative w-full h-full object-cover">
+    <article class="w-full h-[600px] mb-25">
+        <div class="flex h-full">
+            <div class="relative flex flex-col flex-1 bg-ctg-lux bg-center bg-cover py-10 justify-between items-center font-medium text-white">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <h3 class="text-[32px] z-1">Luxuosa</h3>
+                <button class="duration-200 z-1 border-white border px-4 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-black text-[24px]">Mais detalhes</button>
             </div>
-            <div class="relative">
-                <h1 class="absolute right-1/2 translate-1/2 top-[20px] font-medium text-white text-[32px] texto z-50">ECONÔMICA</h1>
-                <button class="absolute duration-200 right-1/2 translate-1/2 hover:bg-white hover:text-black cursor-pointer font-medium text-[24px] text-white border-1 px-4 py-2 rounded-lg z-50 bottom-[40px]"> 
-                    Mais Detalhes
-                </button>
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 z-10"></div>
-                <img src="../assets/img/carroEconomica.png" alt="" class="relative w-full h-full object-cover">
+
+            <div class="relative flex flex-col flex-1 bg-ctg-eco bg-center bg-cover py-10 justify-between items-center font-medium text-white">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <h3 class="text-[32px] z-1">Econômica</h3>
+                <button class="duration-200 z-1 border-white border px-4 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-black text-[24px]">Mais detalhes</button>
             </div>
-            <div class="relative">
-                <h1 class="absolute right-1/2 translate-1/2 top-[20px] font-medium text-white text-[32px] z-50">INTERMEDIÁRIA</h1>
-                <button class="absolute duration-200 right-1/2 translate-1/2 hover:bg-white hover:text-black cursor-pointer font-medium text-[24px] text-white border-1 px-4 py-2 rounded-lg z-50 bottom-[40px]"> 
-                    Mais Detalhes
-                </button>
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90 z-10"></div>
-                <img src="../assets/img/carroIntermediário.png" alt="" class="relative w-full h-full object-cover">
+            
+            <div class="relative flex flex-col flex-1 bg-ctg-int bg-center bg-cover py-10 justify-between items-center font-medium text-white">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <h3 class="text-[32px] z-1">Intermediária</h3>
+                <button class="duration-200 z-1 border-white border px-4 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-black text-[24px]">Mais detalhes</button>
             </div>
         </div>
-        
     </article>
 
-    <article class="catalogo max-h-[1000px] max-w-[1320px] overflow-y-scroll mx-auto rounded-lg bg-white shadow-xl mb-25">
-        <header class="flex justify-between px-8 py-4 shadow-xl border-b-1 border-gray-300 rounded-lg max-w-[1236px] gap-[196px]">
+    <article class="max-h-[800px] max-w-[1320px] mx-auto rounded-lg bg-white shadow-xl mb-25">
+        <header class="flex justify-between px-8 py-4 shadow-md rounded-lg mb-15">
             <h3 class="font-medium text-[32px]">Catálogo</h3>
-            <input type="text" name="" id="" class="px-2 text-gray-600 border-1 rounded-lg border-gray-500 w-[540px]">
-            <button class="flex justify-between items-center font-medium text-white bg-green-500 rounded-lg px-4 py-2" name="" id="">Filtrar <span><img src="../assets/icons/arrowDown.svg" alt=""></span></button>
+            <input type="text" name="search-car" id="search-car" placeholder="Busque pelo nome do carro" class="px-2 text-gray-600 border-1 rounded-lg border-gray-500 w-[540px]">
+            <button class="flex justify-between gap-2 items-center font-medium text-white bg-green-500 rounded-lg px-4 py-2 text-[20px] cursor-pointer">
+                Filtrar 
+                <span>
+                    <img src="../assets/icons/arrowDown.svg" alt="">
+                </span>
+            </button>
         </header>
+        <section class="overflow-y-scroll">
+            <h2 class="px-8 py-4 font-medium text-gray-400 text-center text-[24px]">Nenhum carro encontrado :C</h2>
+        </section>
     </article>
 
-    <footer class="px-16 py-20 border-t-1 border-gray-300">
-        <div class="flex gap-25">
+    <footer class="border-t-1 border-gray-300">
+        <div class="flex gap-25 py-20 px-16">
             <div class="flex-1">
-                <h3 class="font-medium">Empresa</h3>
+                <h3 class="text-[24px] mb-3 font-medium">Empresa</h3>
                 <a href="" class="text-gray-600 underline block">sobre</a>
                 <a href="" class="text-gray-600 underline block">empregos</a>
                 <a href="" class="text-gray-600 underline block">aplicativos</a>
                 <a href="" class="text-gray-600 underline block">blog</a>
                 <a href="" class="text-gray-600 underline block">como trabalhamos</a>
-                
-
             </div>
             <div class="flex-1">
-                <h3 class="font-medium">Contato</h3>
+                <h3 class="text-[24px] mb-3 font-medium">Contato</h3>
                 <a href="" class="text-gray-600 underline block">ajuda</a>
                 <a href="" class="text-gray-600 underline block">imprensa</a>
                 <a href="" class="text-gray-600 underline block">afiliados</a>
             </div>
             <div class="flex-1">
-                <h3 class="font-medium">Mais</h3>
+                <h3 class="text-[24px] mb-3 font-medium">Mais</h3>
                 <a href="" class="text-gray-600 underline block">taxas</a>
                 <a href="" class="text-gray-600 underline block">nossas agências</a>
                 <a href="" class="text-gray-600 underline block">anuncie conosco</a>
             </div>
         </div>
-    </footer>
-    <footer class="flex justify-center py-4 border-t-1 border-gray-300">
-        <div class="">
+        <div class="text-center py-8 border-t-1 border-gray-300">
             <p class="text-gray-500">Todos direitos reservados à EncontraAQ ©</p>
         </div>
     </footer>
-
-
-
 </body>
 </html>

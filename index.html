@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EncontraAQ | Home</title>
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="icon" type="image/svg" href="./src/assets/icons/AQ.svg">
+    <link rel="stylesheet" href="./src/css/output.css">
 </head>
 <body>
-    <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl">
-        <div class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></div>
-        <div class="flex gap-20 font-medium text-[20px]">
-            <nav class="flex gap-10">
-                <a href="#">Ofertas</a>
-                <a href="#">Locais</a>
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
+    <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl mb-16">
+        <a href="/" class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></a>
+        <div class="flex gap-20 items-center font-medium text-[20px] text-gray-600">
+            <nav class="flex gap-10 items-center">
+                <a href="./src/pages/ofertas.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Ofertas</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Locais</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Sobre</a>
+                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
             </nav>
-            <div class="">
-                <a href="#" class="p-3">Login</a>
-                <a href="#" class="p-1.5 rounded-md bg-green-600 text-white font-medium cadastro text-[16px]">Cadastrar-se</a>
+            <div class="flex items-center gap-10">
+                <a href="#" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Login</a>
+                <a href="#" class="duration-200 p-2 hover:bg-green-800 rounded-md bg-green-600 text-white font-medium">Cadastrar-se</a>
             </div>
         </div>
     </header>

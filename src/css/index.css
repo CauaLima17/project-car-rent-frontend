@@ -1,2 +1,8 @@
 @import 'tailwindcss';
 
+@theme {
+  --background-image-ofertas-intro: url('../assets/img/bannerOfertas.png');
+  --background-image-ctg-lux: url('../assets/img/carroLuxo.png');
+  --background-image-ctg-eco: url('../assets/img/carroEconomica.png');
+  --background-image-ctg-int: url('../assets/img/carroIntermediario.png');
+}
