@@ -10,46 +10,55 @@
 </head>
 <body class="flex items-center justify-center bg-gray-100 h-screen px-4">
     <div class="h-140 grid grid-cols-2 max-w-5xl w-full shadow-xl rounded-xl bg-white">
-        <form class="p-6 rounded-l-xl" id="cadastro">
+        <form class="p-6 rounded-l-xl hidden" id="cadastro">
             <h2 class="font-medium text-[32px] mb-5">
                 Cadastre-se
             </h2>
             <div>
-                <label class="font-medium block mb-2" for="username">Seu nome</label>
-                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="username" placeholder="Digite seu nome de usuário">
+                <label class="font-medium block mb-2" for="name">Seu nome</label>
+                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="name" placeholder="Digite seu nome de usuário">
             </div>
             <div>
                 <label class="font-medium block mb-2"  for="email">Seu email</label>
-                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="email" placeholder="Digite seu email">
+                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="email" id="email" placeholder="Digite seu email">
             </div>
             <div>
                 <label class="font-medium block mb-2"  for="password">Sua senha</label>
-                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="password" placeholder="Digite sua senha">
+                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="password" id="password" placeholder="Digite sua senha">
             </div>
             <div>
                 <label class="font-medium block mb-2" for="retrypassword">Confirme sua senha</label>
-                <input class="mb-6 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="retrypassword" placeholder="Confirme sua senha">
+                <input class="mb-5 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="password" id="retrypassword" placeholder="Confirme sua senha">
             </div>
-            <button class="cursor-pointer bg-gradient-to-r from-green-400 to-green-500 rounded-2xl text-white font-medium p-2 w-full">Enviar</button>
+
+            <button class="cursor-pointer bg-gradient-to-r from-green-400 to-green-500 rounded-2xl text-white font-medium p-2 w-full mb-4">Enviar</button>
+
+            <p id="cadformErr" class="text-red-400 font-medium"></p>
         </form>
-        <form class="p-6 rounded-l-xl hidden" id="cadastro">
+
+        <form class="p-6 rounded-l-xl" id="login">
             <h2 class="font-medium text-[32px] mb-5">
                 Login
             </h2>
             <div>
                 <label class="font-medium block mb-2"  for="email">Seu email</label>
-                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="email" placeholder="Digite seu email">
+                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="email" id="email" placeholder="Digite seu email">
             </div>
             <div>
                 <label class="font-medium block mb-2"  for="password">Sua senha</label>
-                <input class="mb-4 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="text" id="password" placeholder="Digite sua senha">
+                <input class="mb-5 rounded-2xl bg-gray-200 w-full text-gray-600 p-2" type="password" id="password" placeholder="Digite sua senha">
             </div>
-            <button class="cursor-pointer bg-gradient-to-r from-green-400 to-green-500 rounded-2xl text-white font-medium p-2 w-full">Entrar</button>
+            <button class="cursor-pointer bg-gradient-to-r from-green-400 to-green-500 rounded-2xl text-white font-medium p-2 w-full mb-4">Entrar</button>
+
+            <p id="logFormErr" class="text-red-400"></p>
         </form>
+
         <div class="flex flex-col justify-center items-center bg-gradient-to-t from-green-400 to-green-700 rounded-r-xl">
             <h2 class="text-center text-white font-medium text-[32px] mb-4">Seja bem vindo à <br>EncontraAQ!</h2>
-            <button class="duration-150 cursor-pointer hover:bg-white hover:text-black border border-white rounded-2xl px-3 py-2 text-white font-medium">Fazer cadastro</button>
+            <button id="switch-form" class="duration-150 cursor-pointer hover:bg-white hover:text-black border border-white rounded-2xl px-3 py-2 text-white font-medium">Fazer cadastro</button>
         </div>
     </div>
+
+    <script type="module" src="./src/js/noAuth/form.js"></script>
 </body>
 </html>
