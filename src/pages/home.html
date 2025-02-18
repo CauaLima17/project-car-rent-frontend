@@ -7,6 +7,18 @@
     <title>EncontraAQ | Home</title>
     <link rel="icon" type="image/svg" href="./src/assets/icons/AQ.svg">
     <link rel="stylesheet" href="../css/output.css">
+    <style type="text/tailwindcss">
+        .underline-custom::after {
+            content: '';
+            position:absolute;
+            left:50%;
+            width: 10%;
+            bottom: -8px;
+            height: 3px; 
+            background-color: rgb(1, 179, 102,1); 
+            transform: translateX(-50%);
+}
+</style>
 </head>
 <body>
     <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl mb-16">
@@ -24,21 +36,36 @@
             </div>
         </div>
     </header>
-    <article class="h-[796px] w-full px-16">
-        <div class="flex flex-col mb-10">
-            <h1 class="text-[48px] font-medium"><span class="text-green-600">Buscando</span> pelo carro <br> perfeito para sua <br> viagem?</h1>
-            <p class="text-[24px] text-gray-600">Na EncontraAQ, você aluga mais que um <br> carro. Ganhe liberdade para ir onde quiser, <br> sem complicações! Com preços imbatíveis, <br> reserva rápida em uma frota moderna, <br> garantimos a melhor experiência. Escolha, <br> reserve e pegue a estrada com conforto e <br> segurança!</p>
+    <article class="flex h-[796px] w-full px-16">
+        <div>
+            <div class="flex flex-col mb-10">
+                <h1 class="text-[48px] font-medium"><span class="text-green-600">Buscando</span> pelo carro <br> perfeito para sua <br> viagem?</h1>
+                <p class="text-[24px] text-gray-600">Na EncontraAQ, você aluga mais que um <br> carro. Ganhe liberdade para ir onde quiser, <br> sem complicações! Com preços imbatíveis, <br> reserva rápida em uma frota moderna, <br> garantimos a melhor experiência. Escolha, <br> reserve e pegue a estrada com conforto e <br> segurança!</p>
+            </div>
+            <div class="flex px-8 py-8 gap-20 rounded-xl bg-gray-800">
+                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/maps.svg"></span>Local de retirada</p>
+                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/calendar.svg"></span>Data</p>
+                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/clock.svg"></span>Hora</p>
+                <button class="bg-green-600 font-medium rounded-xl text-white px-8 py-[19px] hover:bg-white hover:text-black cursor-pointer duration-200">CONFIRMAR</button>
+            </div>
         </div>
-        <div class="flex border-1 px-8 py-8 gap-20 rounded-xl bg-gray-700">
-            <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/maps.svg"></span>Local de retirada</p>
-            <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/calendar.svg"></span>Data</p>
-            <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="../assets/icons/clock.svg"></span>Hora</p>
-            <button class="bg-green-600 font-medium rounded-xl text-white px-[26px] py-[19px] hover:bg-white hover:text-black cursor-pointer duration-200">CONFIRMAR</button>
+    
+        <div class="max-w-[400px] left-[200px] bg-gradient-to-t from-green-500 to-green-900 relative rounded-xl mb-25">
+            <img src="../assets/img/carroVitrine.png" class="max-w-[800px]" >
         </div>
-
-        <div class="bg-green-700"></div>
     </article>
 
+    <article class="relative top-10 flex flex-col items-center mx-auto max-w-[1400px] mb-25">
+        <h1 class="font-medium text-[48px] text-gray-950 mb-15">Conheça nossas ofertas</h1>
+        <div class="flex gap-15 mb-10">
+            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
+            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
+            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
+        </div>
+        <button class=" duration-200 flex gap-4 hover:bg-black hover:text-white cursor-pointer font-medium text-3xl border-1 border-black px-4 py-3 rounded-lg right-10 top-137 absolute">
+            <p>Ir para ofertas</p>
+            <span class="py-2.5"><img src="../assets/icons/arrowBlack.svg" alt=""></span>
+        </button>
     
     <footer class="border-t-1 border-gray-300">
         <div class="flex gap-25 py-20 px-16">
