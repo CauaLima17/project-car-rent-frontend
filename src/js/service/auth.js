@@ -5,9 +5,16 @@ const auth = {
         const data = fetchData('http://localhost:5000/auth/login', 'POST', userData)
         return data
     },
-    cadastro: async (userData) => {
+    register: async (userData) => {
         const data = fetchData('http://localhost:5000/usuarios', 'POST', userData)
         return data
+    },
+    validateToken: () => {
+        const token = localStorage.getItem('userToken')
+
+        if (!token) {
+            window.location.href = '/'
+        }
     }
 }
 
