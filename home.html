@@ -24,89 +24,72 @@
                 <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
             </nav>
             <div class="flex items-center gap-10">
-                <a href="./index.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Login</a>
-                <a href="./index.html" class="duration-200 p-2 hover:bg-green-800 rounded-md bg-green-600 text-white font-medium">Cadastrar-se</a>
+                <a href="./home.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Conta</a>
             </div>
         </div>
     </header>
 
-    <article class="relative grid grid-cols-2 gap-20 max-w-[1400px] mx-auto h-[720px]">
+    <article class="grid grid-cols-2 gap-25 items-center max-w-[1400px] mx-auto h-[640px] mb-25">
         <div>
-            <div>
-                <h1 class="text-[48px] font-medium my-16"><span class="text-green-600">Buscando</span> pelo carro <br>perfeito para sua viagem?</h1>
-                <p class="text-[24px] text-gray-600">Na EncontraAQ, você aluga mais que um carro. Ganhe liberdade para ir onde quiser, sem complicações! Com preços imbatíveis, reserva rápida em uma frota moderna, garantimos a melhor experiência. Escolha, reserve e pegue a estrada com conforto e segurança!</p>
-            </div>
-
-            <div class="absolute w-[80%] z-1 bottom-16 flex px-8 py-8 gap-20 rounded-xl bg-gray-700">
-                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="./src/assets/icons/maps.svg"></span>Local de retirada</p>
-                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="./src/assets/icons/calendar.svg"></span>Data</p>
-                <p class="font-medium text-white flex items-center gap-[6px]"><span><img src="./src/assets/icons/clock.svg"></span>Hora</p>
-                <button class="bg-green-600 font-medium rounded-xl text-white px-[26px] py-[19px] hover:bg-white hover:text-black cursor-pointer duration-200">CONFIRMAR</button>
-            </div>
+             <h1 class="text-[48px] font-medium mb-10"><span class="text-green-600">Buscando</span> pelo carro <br>perfeito para sua viagem?</h1>
+            <p class="text-[24px] text-gray-600">Na EncontraAQ, você aluga mais que um carro. Ganhe liberdade para ir onde quiser, sem complicações! Com preços imbatíveis, reserva rápida em uma frota moderna, garantimos a melhor experiência. Escolha, reserve e pegue a estrada com conforto e segurança!</p>
         </div>
 
-        <div class="relative bg-green-700 rounded-2xl x-full h-full">
-            <img class="absolute top-16 -left-24" src="./src/assets/img/carrovitrine.png" alt="Carro">
+        <div class="relative bg-green-700 rounded-2xl h-full">
+            <img class="absolute top-1/2 -translate-y-1/2 -left-16 w-full" src="./src/assets/img/carroVitrine.png" alt="Carro">
         </div>
     </article>
-    <br>
+
     <article class="flex flex-col items-center mx-auto max-w-[1400px] mb-25">
-        <h1 class="font-medium text-[48px] text-gray-950 mb-15">Ofertas</h1>
-        <div class="flex gap-15">
-            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
-            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
-            <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
-        </div>
-        <br>
-        <div>
-            <a href="ofertas.html" class="hover:fill-white fill-black z-1 duration-200 flex gap-3 hover:bg-black hover:text-white cursor-pointer font-medium text-3xl border-1 border-black px-4 py-3 rounded-lg flex items-center ">
-                <p>Ir para as ofertas</p>
-                <svg class="fill-inherit" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="fill-inherit" d="M17.0667 12.3334H0.833374V9.66671H17.0667L9.60004 2.20004L11.5 0.333374L22.1667 11L11.5 21.6667L9.60004 19.8L17.0667 12.3334Z"/>
-                </svg>
-            </a>
-        </div>
+        <h1 class="font-medium text-[48px] text-gray-950 mb-15">Conheça nossas ofertas</h1>
+        <div id="destaques" class="flex w-full justify-between mb-5"></div>
+ 
+        <a href="ofertas.html" class="self-end hover:fill-white fill-black z-1 duration-200 gap-3 hover:bg-black hover:text-white cursor-pointer font-medium text-3xl border-1 border-black px-4 py-3 rounded-lg flex items-center">
+            <p>Ir para as ofertas</p>
+            <svg class="fill-inherit" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-inherit" d="M17.0667 12.3334H0.833374V9.66671H17.0667L9.60004 2.20004L11.5 0.333374L22.1667 11L11.5 21.6667L9.60004 19.8L17.0667 12.3334Z"/>
+            </svg>
+        </a>
     </article>
-    <article class="bg-black flex flex-col items-center py-8">
-        <p class="text-white text-medium text-5xl">Sobre nossa companhia</p>
-        <br>
-        <p class="text-white text-medium text-justify">
+
+    <article class="bg-gray-950 flex flex-col items-center text-center py-8 mb-25">
+        <h1 class="text-white text-medium text-[48px] mb-5">Sobre nossa companhia</h1>
+        <p class="text-white text-medium mb-10 text-[24px]">
             Viajar deve ser simples, e é isso que fazemos na EncontraAQ.<br>
             Oferecemos veículos modernos, um processo de reserva rápido e um<br>
             serviço sem complicações. Seja para uma aventura ou um<br>
             compromisso importante, estamos aqui para levar você mais longe<br>
             com conforto e segurança.
         </p>
-        <br>
-        <button class="z-1 duration-200 flex gap-3 hover:bg-white hover:text-black cursor-pointer font-medium text-3xl border-1 text-white border-white px-4 py-3 rounded-lg">
+        <a href="/home.html" class="fill-white hover:fill-black items-center z-1 duration-200 flex gap-3 hover:bg-white hover:text-black cursor-pointer font-medium text-3xl border-1 text-white border-white px-4 py-3 rounded-lg">
             <p>Saiba mais</p>
-            <span><img src="./src/assets/icons/arrow.svg" alt=""></span>
-        </button>
+            <svg class="fill-inherit" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-inherit" d="M17.0667 12.3334H0.833374V9.66671H17.0667L9.60004 2.20004L11.5 0.333374L22.1667 11L11.5 21.6667L9.60004 19.8L17.0667 12.3334Z"/>
+            </svg>
+        </a>
     </article>
-
-    
 
     <footer id="rodape" class="border-t-1 border-gray-300">
         <div class="flex gap-25 py-20 px-16">
             <div class="flex-1">
-                <h3 class="text-[24px] mb-3 font-medium">Empresa</h3>
-                <a href="" class="text-gray-600 underline block">sobre</a>
-                <a href="" class="text-gray-600 underline block">empregos</a>
-                <a href="" class="text-gray-600 underline block">aplicativos</a>
-                <a href="" class="text-gray-600 underline block">blog</a>
-                <a href="" class="text-gray-600 underline block">como trabalhamos</a>
+                <h3 class="text-[32px] mb-3 font-medium">Empresa</h3>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">sobre</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">empregos</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">aplicativos</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">blog</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">como trabalhamos</a>
             </div>
             <div class="flex-1">
-                <h3 class="text-[24px] mb-3 font-medium">Contato</h3>
-                <a href="" class="text-gray-600 underline block">ajuda</a>
-                <a href="" class="text-gray-600 underline block">imprensa</a>
-                <a href="" class="text-gray-600 underline block">afiliados</a>
+                <h3 class="text-[32px] mb-3 font-medium">Contato</h3>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">ajuda</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">imprensa</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">afiliados</a>
             </div>
             <div class="flex-1">
-                <h3 class="text-[24px] mb-3 font-medium">Mais</h3>
-                <a href="" class="text-gray-600 underline block">taxas</a>
-                <a href="" class="text-gray-600 underline block">nossas agências</a>
-                <a href="" class="text-gray-600 underline block">anuncie conosco</a>
+                <h3 class="text-[32px] mb-3 font-medium">Mais</h3>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">taxas</a>
+                <a href="" class="text-gray-600 text-[24px] underline block mb-2">nossas agências</a>
+                <a href="" class="text-gray-600 text-[24px] underline block">anuncie conosco</a>
             </div>
         </div>
         <div class="text-center py-8 border-t-1 border-gray-300">
