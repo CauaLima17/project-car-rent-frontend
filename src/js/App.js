@@ -2,7 +2,7 @@ import auth from './service/auth.js';
 import loadCarsMethods from './authPages/loadCars.js';
 import handleAuthForm from './noAuthPages/form.js';
 
-auth.validateToken()
+//auth.validateToken()
 
 const verifyNavigate = () => {
     const currentLocation = window.location.pathname
