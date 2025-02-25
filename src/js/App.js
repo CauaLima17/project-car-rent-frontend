@@ -1,7 +1,7 @@
 import auth from './service/auth.js';
 import loadCarsMethods from './authPages/loadCars.js';
 
-auth.validateToken()
+//auth.validateToken()
 
 const verifyNavigate = () => {
     const currentLocation = window.location.href
