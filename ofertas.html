@@ -20,19 +20,24 @@
         }
     </style>
 </head>
+
+<script>
+     document.documentElement.style.scrollBehavior = "smooth";
+</script>
+
 <body>
     <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl mb-16">
         <a href="/" class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></a>
         <div class="flex gap-20 items-center font-medium text-[20px] text-gray-600">
             <nav class="flex gap-10 items-center">
                 <a href="./src/pages/ofertas.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Ofertas</a>
-                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Locais</a>
-                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Sobre</a>
-                <a href="/" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
+                <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Locais</a>
+                <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Sobre</a>
+                <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
             </nav>
             <div class="flex items-center gap-10">
-                <a href="#" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Login</a>
-                <a href="#" class="duration-200 p-2 hover:bg-green-800 rounded-md bg-green-600 text-white font-medium">Cadastrar-se</a>
+                <a href="./index.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Login</a>
+                <a href="./index.html" class="duration-200 p-2 hover:bg-green-800 rounded-md bg-green-600 text-white font-medium">Cadastrar-se</a>
             </div>
         </div>
     </header>
@@ -99,7 +104,7 @@
         </section>
     </article>
 
-    <footer class="border-t-1 border-gray-300">
+    <footer id="rodape" class="border-t-1 border-gray-300">
         <div class="flex gap-25 py-20 px-16">
             <div class="flex-1">
                 <h3 class="text-[24px] mb-3 font-medium">Empresa</h3>
