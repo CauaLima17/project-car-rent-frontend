@@ -27,10 +27,10 @@
 
 <body>
     <header class="flex justify-between px-8 py-4 shadow-xl items-center max-w-[1400px] mx-auto rounded-b-2xl mb-16">
-        <a href="/" class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></a>
+        <a href="/home.html" class="font-medium text-[32px]">Encontra<span class="text-green-600">AQ</span></a>
         <div class="flex gap-20 items-center font-medium text-[20px] text-gray-600">
             <nav class="flex gap-10 items-center">
-                <a href="./src/pages/ofertas.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Ofertas</a>
+                <a href="./ofertas.html" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Ofertas</a>
                 <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Locais</a>
                 <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Sobre</a>
                 <a href="#rodape" class="duration-200 hover:text-black p-2 hover:-translate-y-1">Contato</a>
@@ -50,14 +50,17 @@
                 <br>
                 <span class="text-green-400">você merece</span>.
             </h1>
-            <button class="z-1 duration-200 flex gap-3 hover:bg-white hover:text-black cursor-pointer font-medium text-3xl border-1 border-white px-4 py-3 rounded-lg">
+            <a ></a>
+            <a href="#ofertas" class="z-1 duration-200 flex gap-3 hover:bg-white fill-white hover:fill-black hover:text-black cursor-pointer font-medium text-3xl border-1 border-white px-4 py-3 rounded-lg">
                 <p>Ir para o catálogo</p>
-                <span><img src="../assets/icons/arrow.svg" alt=""></span>
-            </button>
+                <svg class="fill-inherit" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-inherit" d="M26.9584 21.6667H6.66675V18.3333H26.9584L17.6251 8.99999L20.0001 6.66666L33.3334 20L20.0001 33.3333L17.6251 31L26.9584 21.6667Z"/>
+                </svg>
+            </a>
         </div>
     </article>
     
-    <article class="flex flex-col items-center mx-auto max-w-[1400px] mb-25">
+    <article id="destaques" class="flex flex-col items-center mx-auto max-w-[1400px] mb-25">
         <h1 class="font-medium text-[48px] text-gray-950 mb-15">Destaques</h1>
         <div class="flex gap-15">
             <div class="w-[400px] h-[400px] bg-gray-300 rounded-2xl"></div>
@@ -88,7 +91,7 @@
         </div>
     </article>
 
-    <article class="max-h-[800px] max-w-[1320px] mx-auto rounded-lg bg-white shadow-xl mb-25">
+    <article id="ofertas" class="max-h-[800px] max-w-[1320px] mx-auto rounded-lg bg-white shadow-xl mb-25">
         <header class="flex justify-between px-8 py-4 shadow-md rounded-lg mb-15">
             <h3 class="font-medium text-[32px]">Catálogo</h3>
             <input type="text" name="search-car" id="search-car" placeholder="Busque pelo nome do carro" class="px-2 text-gray-600 border-1 rounded-lg border-gray-500 w-[540px]">
@@ -99,7 +102,7 @@
                 </span>
             </button>
         </header>
-        <section class="overflow-y-scroll">
+        <section id="catalogo" class="overflow-y-scroll">
             <h2 class="px-8 py-4 font-medium text-gray-400 text-center text-[24px]">Nenhum carro encontrado :C</h2>
         </section>
     </article>

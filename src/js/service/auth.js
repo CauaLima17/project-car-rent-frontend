@@ -14,6 +14,8 @@ const auth = {
 
         if (!token) {
             window.location.href = '/'
+        } else if (token && (window.location.pathname === '/')) {
+            window.location.href = '/home.html'
         }
     }
 }

@@ -1,6 +1,12 @@
+import fetchData from "../service/api"
+
 const loadCarsMethods = {
+    catalog: document.getElementById('catalogo'),
+    highlightOffers: document.getElementById('destaques'),
+
     loadAllCars: async () => {
-        console.log('Carregando todos os carros')
+        const cars = fetchData('http://localhost:5000/carros')
+        console.log(cars)
     },
     loadCarById: async (id) => {
         console.log('Carregando carro com id: ' + id)
