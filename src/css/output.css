@@ -666,6 +666,9 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .border-collapse {
     border-collapse: collapse;
   }
@@ -728,6 +731,9 @@
   .self-end {
     align-self: flex-end;
   }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
   .overflow-y-scroll {
     overflow-y: scroll;
   }
@@ -743,6 +749,10 @@
   .rounded-l-xl {
     border-top-left-radius: var(--radius-xl);
     border-bottom-left-radius: var(--radius-xl);
+  }
+  .rounded-t-xl {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
   }
   .rounded-r-xl {
     border-top-right-radius: var(--radius-xl);
@@ -867,6 +877,7 @@
   .object-fill {
     object-fit: fill;
   }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -1015,6 +1026,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-white);
+      }
+    }
+  }
+  .hover\:fill-black {
+    &:hover {
+      @media (hover: hover) {
+        fill: var(--color-black);
       }
     }
   }
