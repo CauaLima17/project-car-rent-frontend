@@ -13,7 +13,7 @@ const auth = {
         const token = localStorage.getItem('userToken')
 
         if (!token) {
-            window.location.href = '/'
+            window.location.href = '3'
         } else if (token && (window.location.pathname === '/')) {
             window.location.href = '/home.html'
         }
