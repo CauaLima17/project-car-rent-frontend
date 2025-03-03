@@ -2,13 +2,17 @@ import fetchData from "../service/api.js"
 
 function createCarCard(cars, container) {
     const carContainer = document.createElement('div')
-        carContainer.classList.add('max-w-[420px]')
+        carContainer.classList.add('max-w-[420px]', 'mb-4')
         carContainer.innerHTML = `
-        <div class="w-full h-[320px] mb-4">
+        <div class="relative w-full h-[320px] mb-4">
             <img class="w-full h-full object-cover rounded-lg" src="${cars.car_img}" alt="carro" />
+            <p class='absolute bg-black text-white p-2 top-5 right-0 rounded-l-2xl'>R$ ${cars.category._daily_rate},00</p>
         </div>
         <span class='flex justify-between items-center'>
-            <h3 class="text-[24px] font-medium">${cars._model}</h3>
+            <span>
+                <h3 class="text-[24px] font-medium">${cars._model}</h3>
+                <p class="font-medium text-gray-600">${cars.category._name}</p>
+            </span>
             <a class='duration-200 font-medium text-[24px] p-2 bg-green-600 rounded-md text-white hover:bg-green-800' href='/carro.html?id=${cars._id}'>Mais detalhes</a>
         </span>
     `
@@ -47,7 +51,7 @@ const loadCarsMethods = {
 
     loadAllCars: async () => {
         const cars = await fetchData('http://localhost:5000/carros')
-        console.log(cars)
+        cars.map((car) => createCarCard(car, loadCarsMethods.catalog))
     },
     loadCarById: async (id) => {
         const car = await fetchData(`http://localhost:5000/carros/${id}`)
@@ -55,7 +59,8 @@ const loadCarsMethods = {
     },
     loadHighlightCars: async () => {
         const cars = await fetchData('http://localhost:5000/carros')
-        cars.map((car) => createCarCard(car, loadCarsMethods.highlightOffers))
+        const highLightCars = cars.slice(0, 3);
+        highLightCars.map((car) => createCarCard(car, loadCarsMethods.highlightOffers))
     }
 }
 

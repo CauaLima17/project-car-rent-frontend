@@ -12,9 +12,11 @@ const auth = {
     validateToken: () => {
         const token = localStorage.getItem('userToken')
 
-        if (!token) {
-            window.location.href = '3'
+        if (!token && (window.location.pathname != '/')) {
+            console.log('enviar pro index')
+            window.location.href = '/'
         } else if (token && (window.location.pathname === '/')) {
+            console.log('enviar pro index')
             window.location.href = '/home.html'
         }
     }
