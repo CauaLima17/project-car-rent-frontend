@@ -1,5 +1,6 @@
 import jwtDecode from "https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/+esm";
 import fetchData from "../service/api.js";
+import { createCarUserCard } from '../util/carsComponents.js'
 
 const loadUserData = {
   decodedToken: {},
@@ -7,7 +8,7 @@ const loadUserData = {
   usernameElement: document.getElementById('nome_do_usuario'),
   userEmailElement: document.getElementById('email_do_usuario'),
   userRentsContainer: document.getElementById('alugueis_do_usuario'),
-  noCarsRented: document.getElementById('nenhum_carro_alugado'),
+  noCarsRentedTitle: document.getElementById('nenhum_carro_alugado'),
 
   loadData: () => {
     const token = localStorage.getItem('userToken')
@@ -26,9 +27,11 @@ const loadUserData = {
   loadRents: async () => {
     const cars = await fetchData(`http://localhost:5000/carros/usuario/${loadUserData.decodedToken.id}`)
     if (cars.length === 0) {
-      loadUserData.noCarsRented.classList.remove('hidden')
+      loadUserData.noCarsRentedTitle.classList.remove('hidden')
     } else {
-      loadUserData.noCarsRented.classList.add('hidden')
+      loadUserData.noCarsRentedTitle.classList.add('hidden')
+      cars.map((car) => createCarUserCard(car, loadUserData.userRentsContainer))
+      
     }
   },
 

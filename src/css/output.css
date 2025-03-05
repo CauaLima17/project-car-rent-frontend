@@ -597,6 +597,9 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -611,6 +614,9 @@
   }
   .mb-25 {
     margin-bottom: calc(var(--spacing) * 25);
+  }
+  .mb-100 {
+    margin-bottom: calc(var(--spacing) * 100);
   }
   .block {
     display: block;
@@ -639,6 +645,9 @@
   .h-\[320px\] {
     height: 320px;
   }
+  .h-\[400px\] {
+    height: 400px;
+  }
   .h-\[500px\] {
     height: 500px;
   }
@@ -657,14 +666,8 @@
   .h-screen {
     height: 100vh;
   }
-  .w-2xs {
-    width: var(--container-2xs);
-  }
   .w-\[100px\] {
     width: 100px;
-  }
-  .w-\[120px\] {
-    width: 120px;
   }
   .w-\[540px\] {
     width: 540px;
@@ -746,17 +749,8 @@
   .gap-25 {
     gap: calc(var(--spacing) * 25);
   }
-  .gap-x-10 {
-    column-gap: calc(var(--spacing) * 10);
-  }
-  .gap-x-20 {
-    column-gap: calc(var(--spacing) * 20);
-  }
   .gap-y-10 {
     row-gap: calc(var(--spacing) * 10);
-  }
-  .self-center {
-    align-self: center;
   }
   .self-end {
     align-self: flex-end;
@@ -767,8 +761,8 @@
   .overflow-auto {
     overflow: auto;
   }
-  .rounded {
-    border-radius: 0.25rem;
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -838,9 +832,6 @@
   .border-gray-500 {
     border-color: var(--color-gray-500);
   }
-  .border-gray-600 {
-    border-color: var(--color-gray-600);
-  }
   .border-white {
     border-color: var(--color-white);
   }
@@ -868,11 +859,11 @@
   .bg-green-700 {
     background-color: var(--color-green-700);
   }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
+  }
+  .bg-red-600 {
+    background-color: var(--color-red-600);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -971,9 +962,6 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
-  .px-14 {
-    padding-inline: calc(var(--spacing) * 14);
-  }
   .px-15 {
     padding-inline: calc(var(--spacing) * 15);
   }
@@ -1003,6 +991,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-start {
+    text-align: start;
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -1112,6 +1103,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-green-900);
+      }
+    }
+  }
+  .hover\:bg-red-800 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-800);
       }
     }
   }

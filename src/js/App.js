@@ -1,7 +1,8 @@
 import auth from './service/auth.js';
 import loadCarsMethods from './AuthPages/loadCars.js';
 import handleAuthForm from './noAuthPages/form.js';
-import loadUserData from './AuthPages/loadUserData.js';
+import loadUserData from './AuthPages/loadUser.js';
+import handleCarForm from './AuthPages/carForm.js'
 
 auth.validateToken()
 
@@ -22,6 +23,9 @@ const verifyNavigate = () => {
             break
         case '/perfil.html':
             loadUserData.loadData()
+            break
+        case '/form.html':
+            handleCarForm.handleSubmit()
             break
         default:
             handleAuthForm.init()
