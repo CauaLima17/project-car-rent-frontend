@@ -1,9 +1,9 @@
-import jwtDecode from "https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/+esm";
 import fetchData from "../service/api.js";
 import { createCarUserCard } from '../util/carsComponents.js'
+import { decodeToken } from "../util/token.js";
 
 const loadUserData = {
-  decodedToken: {},
+  decodedToken: decodeToken(),
   logoutElement: document.getElementById('logout'),
   usernameElement: document.getElementById('nome_do_usuario'),
   userEmailElement: document.getElementById('email_do_usuario'),
@@ -11,12 +11,6 @@ const loadUserData = {
   noCarsRentedTitle: document.getElementById('nenhum_carro_alugado'),
 
   loadData: () => {
-    const token = localStorage.getItem('userToken')
-
-    if (token) { 
-      loadUserData.decodedToken = jwtDecode(token)
-    }
-
     loadUserData.usernameElement.textContent = loadUserData.decodedToken.username
     loadUserData.userEmailElement.textContent = loadUserData.decodedToken.email
 

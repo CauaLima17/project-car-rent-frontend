@@ -1,4 +1,4 @@
-import auth from "../Service/auth.js";
+import auth from "../service/auth.js";
 
 const handleAuthForm = {
     loginForm: document.getElementById('login'),

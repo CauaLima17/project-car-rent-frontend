@@ -36,7 +36,7 @@ export function createCarOverview(details, container) {
                       <p class='text-[16px] text-gray-600'>${details.description}</p>
                   </div>
 
-                  <a class='block self-start p-4 font-medium text-[24px] bg-green-600 text-white rounded-md' href='/form.html?id=${details._id}'>Quero alugar</a>
+                  <a class='block self-start p-4 font-medium text-[24px] bg-green-600 text-white rounded-md' href='/form.html?id=${details._id}&car_name=${details._model}'>Quero alugar</a>
               </div>
           `
           container.appendChild(carDetails)
